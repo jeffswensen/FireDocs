@@ -3,6 +3,12 @@ using System;
 using SugerDocs.Model;
 
 namespace SugerDocs.Data {
+
+    // TODO:
+    /*
+     * https://docs.microsoft.com/en-us/ef/core/modeling/concurrency
+     * 
+     */
     public class DatabaseContext : DbContext, IDatabaseContext {
         public DbSet<Department> Departments => throw new NotImplementedException();
 
