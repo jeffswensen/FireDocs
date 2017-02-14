@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SugerDocs.Web", "src\SugerD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SugerDocs.Model", "src\SugerDocs.Model\SugerDocs.Model.csproj", "{88110E13-7487-4596-B3C2-2685ADFA2632}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SugerDocs.Data", "SugerDocs.Data\SugerDocs.Data.csproj", "{DC8E32CD-8BBA-4E25-939C-4E68A88288DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SugerDocs.Data", "src\SugerDocs.Data\SugerDocs.Data.csproj", "{DC8E32CD-8BBA-4E25-939C-4E68A88288DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

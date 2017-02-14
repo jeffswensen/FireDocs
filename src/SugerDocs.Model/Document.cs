@@ -6,6 +6,7 @@ using System.Text;
 
 namespace SugerDocs.Model {
     public class Document {
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DocumentId { get; set; }
         public string Name { get; set; }
