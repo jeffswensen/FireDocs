@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FireDocs.Model {
+﻿namespace FireDocs.Model {
     public class DocumentRole {
         public int DocumentRoleId { get; set; }
         public int DocumentId { get; set; }

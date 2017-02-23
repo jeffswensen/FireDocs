@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
-
-namespace FireDocs.Model {
+﻿namespace FireDocs.Model {
     public class DepartmentRole {
         public int DepartmentRoleId { get; set; }
         public int DepartmentId { get; set; }

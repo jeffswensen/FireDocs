@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿
 namespace FireDocs.Model {
+    using System.Collections.Generic;
     public class Organization {
         public int OrganizationId { get; set; }
         public string Name { get; set; }

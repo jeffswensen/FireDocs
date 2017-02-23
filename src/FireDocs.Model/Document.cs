@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-
+﻿
 namespace FireDocs.Model {
+    using System.Collections.Generic;
     public class Document {
         public int DocumentId { get; set; }
         public string Name { get; set; }

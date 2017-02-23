@@ -1,5 +1,4 @@
-﻿
-namespace FireDocs.Model {
+﻿namespace FireDocs.Model {
     public class Period {
         public int PeriodId { get; set; }
         public PeriodType PeriodType { get; set; }

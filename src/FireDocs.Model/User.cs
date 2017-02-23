@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FireDocs.Model {
+﻿namespace FireDocs.Model {
+    using System.Collections.Generic;
     public class User {
         public int UserId { get; set; }
         public string FirstName { get; set; }
