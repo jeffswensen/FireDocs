@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SugerDocs.Model {
+namespace FireDocs.Model {
     public class Role {
         public int RoleId { get; set; }
         public string Name { get; set; }

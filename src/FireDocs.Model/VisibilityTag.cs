@@ -1,4 +1,4 @@
-﻿namespace SugerDocs.Model {
+﻿namespace FireDocs.Model {
     public class VisibilityTag {
         public int VisibilityTagId { get; set; }
         public int OrganizationId { get; set; }

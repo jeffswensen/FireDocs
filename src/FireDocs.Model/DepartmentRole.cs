@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace SugerDocs.Model {
+namespace FireDocs.Model {
     public class DepartmentRole {
         public int DepartmentRoleId { get; set; }
         public int DepartmentId { get; set; }

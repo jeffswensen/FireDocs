@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace SugerDocs.Web.Controllers
+namespace FireDocs.Web.Controllers
 {
     public class HomeController : Controller
     {

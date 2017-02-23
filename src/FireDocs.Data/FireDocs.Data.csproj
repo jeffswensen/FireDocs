@@ -4,8 +4,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SugerDocs.Model\SugerDocs.Model.csproj" />
+    <ProjectReference Include="..\FireDocs.Model\FireDocs.Model.csproj" />
   </ItemGroup>
 </Project>

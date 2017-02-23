@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 
-namespace SugerDocs.Web
+namespace FireDocs.Web
 {
     public class Program
     {

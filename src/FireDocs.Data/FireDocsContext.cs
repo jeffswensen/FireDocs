@@ -1,15 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using SugerDocs.Model;
+﻿namespace FireDocs.Data {
+    using Microsoft.EntityFrameworkCore;
+    using FireDocs.Model;
 
-namespace SugerDocs.Data {
-
-    // TODO:
-    /*
-     * https://docs.microsoft.com/en-us/ef/core/modeling/concurrency
-     * 
-     */
-    public class SugerContext : DbContext, ISugerContext {
+    public class FireDocsContext : DbContext, IFireDocsContext {
 
         public DbSet<Department> Departments { get; set; }
 
@@ -64,6 +57,23 @@ namespace SugerDocs.Data {
                 .Property(e => e.DocumentId)
                 .ValueGeneratedOnAdd();
             modelBuilder.Entity<Document>()
+                .Property(e => e.Timestamp)
+                .ValueGeneratedOnAddOrUpdate()
+                .IsConcurrencyToken();
+            modelBuilder.Entity<Document>()
+                .Property<PeriodType>(e => e.PeriodType)
+                .HasDefaultValue(PeriodType.Static);
+            //modelBuilder.Entity<Document>()
+            //    .Property(e => e.Name)
+            //    .HasDefaultValue()
+
+            // DocumentVersion
+            modelBuilder.Entity<DocumentVersion>()
+                .HasKey(e => e.DocumentVersionId);
+            modelBuilder.Entity<DocumentVersion>()
+                .Property(e => e.DocumentVersionId)
+                .ValueGeneratedOnAdd();
+            modelBuilder.Entity<DocumentVersion>()
                 .Property(e => e.Timestamp)
                 .ValueGeneratedOnAddOrUpdate()
                 .IsConcurrencyToken();
@@ -152,19 +162,5 @@ namespace SugerDocs.Data {
                 .HasAlternateKey(e => new { e.OrganizationId, e.Name });
 
         }
-    }
-
-    public interface ISugerContext {
-        DbSet<Department> Departments { get; }
-        DbSet<DepartmentRole> DepartmentRoles { get; }
-        DbSet<Document> Documents { get; }
-        DbSet<DocumentRole> DocumentRoles { get; }
-        DbSet<Organization> Organizations { get; }
-        DbSet<OrganizationRole> OrganizationRoles { get; }
-        DbSet<SiteRole> SiteRoles { get; }
-        DbSet<Role> Roles { get; }
-        DbSet<User> Users { get; }
-        DbSet<VisibilityTag> VisibilityTags { get; }
-
     }
 }

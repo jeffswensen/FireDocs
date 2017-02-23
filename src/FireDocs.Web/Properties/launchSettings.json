@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "SugerDocs.Web": {
+    "FireDocs.Web": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
