@@ -1,5 +1,5 @@
 # FireDocs
-Open Source Document &amp; Workflow Management System for Financial Reporting
+Open Source Document Repository &amp; Workflow Management System for Financial Reporting
 
 ## Planned Stack
 * Asp.Net Core
