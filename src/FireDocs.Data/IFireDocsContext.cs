@@ -6,6 +6,7 @@
         DbSet<Department> Departments { get; }
         DbSet<DepartmentRole> DepartmentRoles { get; }
         DbSet<Document> Documents { get; }
+        DbSet<DocumentVersion> DocumentVersions { get; }
         DbSet<DocumentRole> DocumentRoles { get; }
         DbSet<Organization> Organizations { get; }
         DbSet<OrganizationRole> OrganizationRoles { get; }
@@ -13,6 +14,7 @@
         DbSet<Role> Roles { get; }
         DbSet<User> Users { get; }
         DbSet<VisibilityTag> VisibilityTags { get; }
+        DbSet<Period> Periods { get; }
 
     }
 }

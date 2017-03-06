@@ -9,6 +9,7 @@ namespace FireDocs.Model {
         public List<VisibilityTag> Tags { get; set; }
         public PeriodType PeriodType { get; set; }
         public byte[] Timestamp { get; set; }
+        public bool IsDisabled { get; set; }
 
     }
 }

@@ -10,6 +10,8 @@
 
         public DbSet<Document> Documents { get; set; }
 
+        public DbSet<DocumentVersion> DocumentVersions { get; set; }
+
         public DbSet<DocumentRole> DocumentRoles { get; set; }
 
         public DbSet<Organization> Organizations { get; set; }
@@ -23,6 +25,8 @@
         public DbSet<User> Users { get; set; }
 
         public DbSet<VisibilityTag> VisibilityTags { get; set; }
+
+        public DbSet<Period> Periods { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             
@@ -63,9 +67,9 @@
             modelBuilder.Entity<Document>()
                 .Property<PeriodType>(e => e.PeriodType)
                 .HasDefaultValue(PeriodType.Static);
-            //modelBuilder.Entity<Document>()
-            //    .Property(e => e.Name)
-            //    .HasDefaultValue()
+            modelBuilder.Entity<Document>()
+                .Property(e => e.IsDisabled)
+                .HasDefaultValue(false);
 
             // DocumentVersion
             modelBuilder.Entity<DocumentVersion>()
@@ -77,6 +81,9 @@
                 .Property(e => e.Timestamp)
                 .ValueGeneratedOnAddOrUpdate()
                 .IsConcurrencyToken();
+            modelBuilder.Entity<DocumentVersion>()
+                .Property(e => e.Status)
+                .HasDefaultValue(DocumentVersionStatus.Oustanding);
 
             // DocumentRole
             modelBuilder.Entity<DocumentRole>()

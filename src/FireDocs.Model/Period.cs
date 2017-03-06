@@ -10,6 +10,10 @@
     }
 
     public enum PeriodType {
-        Actual, Reforecast, Budget, Yearly, Static
+        QuarterlyActual,
+        QuarterlyReforecast,
+        AnnualBudget,
+        Yearly,
+        Static
     }
 }
