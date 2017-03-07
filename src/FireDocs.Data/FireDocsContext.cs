@@ -85,6 +85,16 @@
                 .Property(e => e.Status)
                 .HasDefaultValue(DocumentVersionStatus.Oustanding);
 
+            // PhysicalFile
+            modelBuilder.Entity<PhysicalFile>()
+                .HasKey(e => e.PhysicalFileId);
+            modelBuilder.Entity<PhysicalFile>()
+                .Property(e => e.PhysicalFileId)
+                .ValueGeneratedOnAdd();
+            modelBuilder.Entity<PhysicalFile>()
+                .Property(e => e.UploadDate)
+                .ValueGeneratedOnAdd();
+
             // DocumentRole
             modelBuilder.Entity<DocumentRole>()
                 .HasKey(e => e.DocumentRoleId);
